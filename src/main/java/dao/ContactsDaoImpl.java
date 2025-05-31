@@ -25,7 +25,7 @@ public class ContactsDaoImpl implements ContactsDao {
 
 	@Override
 	public Contact getContactById(int idContact) {
-		return contacts.findById(idContact);
+		return contacts.findById(idContact).orElse(null);
 	}
 
 	@Override
