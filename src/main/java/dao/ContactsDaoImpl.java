@@ -2,53 +2,51 @@ package dao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import model.Contact;
 
 @Repository
 public class ContactsDaoImpl implements ContactsDao {
+	
+	@Autowired
+	ContactsJpaSpring contacts;
 
 	@Override
 	public void addContact(Contact contact) {
-		// TODO Auto-generated method stub
-
+		contacts.save(contact);
 	}
 
 	@Override
 	public Contact getContactByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return contacts.findByEmail(email);
 	}
 
 	@Override
 	public Contact getContactById(int idContact) {
-		// TODO Auto-generated method stub
-		return null;
+		return contacts.findById(idContact);
 	}
 
 	@Override
 	public void deleteContactByEmail(String email) {
-		// TODO Auto-generated method stub
+		contacts.deleteByEmail(email);
 
 	}
 
 	@Override
 	public void deleteContactById(int idContact) {
-		// TODO Auto-generated method stub
-
+		contacts.deleteById(idContact);
 	}
 
 	@Override
 	public List<Contact> getAllContacts() {
-		// TODO Auto-generated method stub
-		return null;
+		return contacts.findAll();
 	}
 
 	@Override
 	public void updateContact(Contact contact) {
-		// TODO Auto-generated method stub
-
+		contacts.save(contact);
 	}
 
 }
