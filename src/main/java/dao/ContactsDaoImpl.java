@@ -2,7 +2,6 @@ package dao;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import model.Contact;
@@ -10,9 +9,12 @@ import model.Contact;
 @Repository
 public class ContactsDaoImpl implements ContactsDao {
 	
-	@Autowired
-	ContactsJpaSpring contacts;
+	private final ContactsJpaSpring contacts;
 
+	public ContactsDaoImpl(ContactsJpaSpring contacts) {
+		this.contacts = contacts;
+	}
+	
 	@Override
 	public void addContact(Contact contact) {
 		contacts.save(contact);
