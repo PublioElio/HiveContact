@@ -37,8 +37,9 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public boolean deleteContact(int idContact) {
-		if(dao.deleteContactById(idContact)) {
-			
+		if(dao.getContactById(idContact) != null) {
+			dao.deleteContactById(idContact);
+			return true;
 		}
 		return false;
 	}
