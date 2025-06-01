@@ -25,7 +25,7 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public List<Contact> getAllContacts() {
-		return null;
+		return dao.getAllContacts();
 	}
 
 	@Override
