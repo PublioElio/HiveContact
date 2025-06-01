@@ -32,8 +32,7 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public Contact getContact(int idContact) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getContact(idContact);
 	}
 
 }
