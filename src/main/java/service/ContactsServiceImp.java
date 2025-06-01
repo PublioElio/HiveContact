@@ -30,10 +30,16 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public void updateContact(Contact contact) {
+		if(dao.getContactById(contact.getIdContact()) == null) {
+			dao.updateContact(contact);
+		}
 	}
 
 	@Override
 	public boolean deleteContact(int idContact) {
+		if(dao.deleteContactById(idContact)) {
+			
+		}
 		return false;
 	}
 
