@@ -14,7 +14,6 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public boolean addContact(Contact contact) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
