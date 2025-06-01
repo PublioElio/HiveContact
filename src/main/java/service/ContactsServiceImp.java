@@ -3,10 +3,12 @@ package service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import dao.ContactsDao;
 import model.Contact;
 
+@Service
 public class ContactsServiceImp implements ContactsService {
 	
 	@Autowired
@@ -41,7 +43,7 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public Contact getContact(int idContact) {
-		return dao.getContact(idContact);
+		return dao.getContactById(idContact);
 	}
 
 }
