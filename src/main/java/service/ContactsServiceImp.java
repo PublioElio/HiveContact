@@ -14,6 +14,10 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public boolean addContact(Contact contact) {
+		if(dao.getContactById(contact.getIdContact()) == null) {
+			dao.addContact(contact);
+			return true;
+		}
 		return false;
 	}
 
