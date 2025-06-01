@@ -25,7 +25,6 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public List<Contact> getAllContacts() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
