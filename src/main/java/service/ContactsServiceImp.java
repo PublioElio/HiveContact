@@ -2,9 +2,15 @@ package service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import dao.ContactsDao;
 import model.Contact;
 
 public class ContactsServiceImp implements ContactsService {
+	
+	@Autowired
+	ContactsDao dao;
 
 	@Override
 	public boolean addContact(Contact contact) {
