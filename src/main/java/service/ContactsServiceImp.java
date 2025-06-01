@@ -2,7 +2,6 @@ package service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dao.ContactsDao;
@@ -10,13 +9,16 @@ import model.Contact;
 
 @Service
 public class ContactsServiceImp implements ContactsService {
-	
-	@Autowired
-	ContactsDao dao;
+
+	private final ContactsDao dao;
+
+	public ContactsServiceImp(ContactsDao dao) {
+		this.dao = dao;
+	}
 
 	@Override
 	public boolean addContact(Contact contact) {
-		if(dao.getContactById(contact.getIdContact()) == null) {
+		if (dao.getContactById(contact.getIdContact()) == null) {
 			dao.addContact(contact);
 			return true;
 		}
@@ -37,7 +39,7 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public boolean deleteContact(int idContact) {
-		if(dao.getContactById(idContact) != null) {
+		if (dao.getContactById(idContact) != null) {
 			dao.deleteContactById(idContact);
 			return true;
 		}
