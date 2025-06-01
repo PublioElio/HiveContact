@@ -34,7 +34,6 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public boolean deleteContact(int idContact) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
