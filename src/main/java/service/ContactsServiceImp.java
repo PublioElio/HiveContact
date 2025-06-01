@@ -30,8 +30,6 @@ public class ContactsServiceImp implements ContactsService {
 
 	@Override
 	public void updateContact(Contact contact) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
