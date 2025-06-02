@@ -36,4 +36,6 @@ public class ContactsController {
 		return String.valueOf(service.addContact(contact));
 	}
 
+	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+	public void updateContact
 }
