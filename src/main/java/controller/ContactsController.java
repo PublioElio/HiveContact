@@ -5,8 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,9 +24,8 @@ public class ContactsController {
 		return service.getAllContacts();
 	}
 	
-	@PostMapping(value="/{idContact}", produces=MediaType.APPLICATION_JSON_VALUE)
-	public String addContact(@RequestBody Contact contact) {
-		return String.valueOf(service.addContact(contact));
+	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public String getContact(@PathVariable("id") int id) {
 	}
 
 }
