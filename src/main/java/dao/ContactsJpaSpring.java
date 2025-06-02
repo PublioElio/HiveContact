@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import model.Contact;
 
 public interface ContactsJpaSpring extends JpaRepository<Contact, Integer> {
-	
+
 	Contact findByEmail(String contactEmail);
-	
+
 	@Transactional
 	@Modifying
 	@Query("DELETE FROM Contact c WHERE c.email = :email")
