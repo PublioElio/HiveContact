@@ -46,7 +46,7 @@ public class ContactsController {
 		service.updateContact(contact);
 	}
 
-	@DeleteMapping(value = "deleteById/{id}")
+	@DeleteMapping("/{id}")
 	public void deleteContact(@PathVariable int id) {
 		service.deleteContact(id);
 	}
