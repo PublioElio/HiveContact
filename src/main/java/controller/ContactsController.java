@@ -19,20 +19,20 @@ import service.ContactsService;
 @RestController
 @RequestMapping("/contacts")
 public class ContactsController {
-	
+
 	@Autowired
 	ContactsService service;
-	
-	@GetMapping(produces=MediaType.APPLICATION_JSON_VALUE)
+
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Contact> getAllContacts() {
 		return service.getAllContacts();
 	}
-	
+
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Contact getContact(@PathVariable int id) {
 		return service.getContact(id);
 	}
-	
+
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String addContact(@RequestBody Contact contact) {
 		return String.valueOf(service.addContact(contact));
@@ -42,8 +42,8 @@ public class ContactsController {
 	public void updateContact(@RequestBody Contact contact) {
 		service.updateContact(contact);
 	}
-	
-	@DeleteMapping(value="deleteById/{id}")
+
+	@DeleteMapping(value = "deleteById/{id}")
 	public void deleteContact(@PathVariable int id) {
 		service.deleteContact(id);
 	}
