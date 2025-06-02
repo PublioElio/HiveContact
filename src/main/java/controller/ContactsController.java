@@ -49,9 +49,10 @@ public class ContactsController {
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Contact> updateContact(@RequestBody Contact contact) {
 		Contact updatedContact = service.getContact(contact.getIdContact());
-		if (updatedContact != null)
-			return ResponseEntity.ok(contact);
-		else
+		if (updatedContact != null) {
+			service.updateContact(contact);
+			return ResponseEntity.ok(updatedContact);
+		} else
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 

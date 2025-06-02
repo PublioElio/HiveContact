@@ -20,13 +20,13 @@ public class Contact implements Serializable {
 	private int idContact;
 
 	@Column(name="contact_age")
-	private int contactAge;
+	private int age;
 
 	@Column(name="contact_email")
-	private String contactEmail;
+	private String email;
 
 	@Column(name="contact_name")
-	private String contactName;
+	private String name;
 
 	public Contact() {
 	}
@@ -40,27 +40,27 @@ public class Contact implements Serializable {
 	}
 
 	public int getContactAge() {
-		return this.contactAge;
+		return this.age;
 	}
 
-	public void setContactAge(int contactAge) {
-		this.contactAge = contactAge;
+	public void setContactAge(int age) {
+		this.age = age;
 	}
 
 	public String getContactEmail() {
-		return this.contactEmail;
+		return this.email;
 	}
 
-	public void setContactEmail(String contactEmail) {
-		this.contactEmail = contactEmail;
+	public void setContactEmail(String email) {
+		this.email = email;
 	}
 
 	public String getContactName() {
-		return this.contactName;
+		return this.name;
 	}
 
-	public void setContactName(String contactName) {
-		this.contactName = contactName;
+	public void setContactName(String name) {
+		this.name = name;
 	}
 
 }
