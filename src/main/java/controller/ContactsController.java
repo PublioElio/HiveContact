@@ -24,7 +24,7 @@ public class ContactsController {
 	private final ContactsService service;
 
 	public ContactsController(ContactsService service) {
-	    this.service = service;
+		this.service = service;
 	}
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -48,11 +48,11 @@ public class ContactsController {
 
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Contact> updateContact(@RequestBody Contact contact) {
-	    Contact updatedContact = service.getContact(contact.getIdContact());
-	    if (updatedContact != null)
-	        return ResponseEntity.ok(contact);
-	    else
-	    	return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		Contact updatedContact = service.getContact(contact.getIdContact());
+		if (updatedContact != null)
+			return ResponseEntity.ok(contact);
+		else
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
 	@DeleteMapping("/{id}")
