@@ -25,9 +25,9 @@ public class ContactsController {
 		return service.getAllContacts();
 	}
 	
-	@PostMapping(value="/{id}", produces=MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value="/{idContact}", produces=MediaType.APPLICATION_JSON_VALUE)
 	public String addContact(@RequestBody Contact contact) {
-		
+		return String.valueOf(service.addContact(contact));
 	}
 
 }
