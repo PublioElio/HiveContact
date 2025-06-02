@@ -28,5 +28,7 @@ public class ContactsController {
 	public Contact getContact(@PathVariable int id) {
 		return service.getContact(id);
 	}
+	
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 
 }
