@@ -38,8 +38,13 @@ public class ContactsController {
 	}
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String addContact(@RequestBody Contact contact) {
-		return String.valueOf(service.addContact(contact));
+	public ResponseEntity<String> addContact(@RequestBody Contact contact) {
+	    boolean isAdded = service.addContact(contact);
+	    if (isAdded) {
+	        return ResponseEntity.status(HttpStatus.CREATED).body("Contact added successfully");
+	    } else {
+	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error adding new contact");
+	    }
 	}
 
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
