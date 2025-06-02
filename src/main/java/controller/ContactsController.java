@@ -38,7 +38,10 @@ public class ContactsController {
 	}
 
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void updateContact(@RequestBody Contact contact ) {
+	public void updateContact(@RequestBody Contact contact) {
 		service.updateContact(contact);
 	}
+	
+	@DeleteMapping(value="deleteById/{id}")
+	public void deleteContact()
 }
