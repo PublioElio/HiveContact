@@ -47,9 +47,12 @@ public class ContactsController {
 	}
 
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Contact> updateContact(@RequestBody Contact contact) {
-		service.updateContact(contact);
-		return ResponseEntity.ok(contact);
+	public ResponseEntity<?> updateContact(@RequestBody Contact contact) {
+	    Contact updatedContact = service.getContact(contact.getIdContact());
+	    if (updatedContact != null)
+	        return ResponseEntity.ok(contact);
+	    else
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Contacto no encontrado");
 	}
 
 	@DeleteMapping("/{id}")
