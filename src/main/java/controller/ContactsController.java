@@ -33,7 +33,7 @@ public class ContactsController {
 	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String addContact(@RequestBody Contact contact) {
-		
+		return String.valueOf(service.addContact(contact));
 	}
 
 }
