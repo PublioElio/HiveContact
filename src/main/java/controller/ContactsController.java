@@ -16,10 +16,8 @@ public class ContactsController {
 	ContactsService service;
 	
 	@GetMapping()
-	public List<Contact> getAllContacts(){
-		
-		
+	public List<Contact> getAllContacts() {
+
 	}
-	
 
 }
