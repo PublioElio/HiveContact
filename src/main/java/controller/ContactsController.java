@@ -25,7 +25,8 @@ public class ContactsController {
 	}
 	
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public String getContact(@PathVariable("id") int id) {
+	public Contact getContact(@PathVariable int id) {
+		return service.getContact(id);
 	}
 
 }
