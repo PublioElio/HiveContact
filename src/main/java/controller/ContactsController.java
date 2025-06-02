@@ -20,8 +20,11 @@ import service.ContactsService;
 @RequestMapping("/contacts")
 public class ContactsController {
 
-	@Autowired
-	ContactsService service;
+	private final ContactsService service;
+
+	public ContactsController(ContactsService service) {
+	    this.service = service;
+	}
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Contact> getAllContacts() {
