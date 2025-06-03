@@ -17,16 +17,29 @@ import org.springframework.web.bind.annotation.RestController;
 import model.Contact;
 import service.ContactsService;
 
+/**
+ * Controlador REST para gestionar operaciones CRUD sobre contactos.
+ */
 @RestController
 @RequestMapping("/contacts")
 public class ContactsController {
 
 	private final ContactsService service;
 
+	/**
+	 * Constructor que inyecta la instancia del servicio ContactsService.
+	 *
+	 * @param service Servicio de contactos.
+	 */
 	public ContactsController(ContactsService service) {
 		this.service = service;
 	}
 
+	/**
+	 * Obtiene la lista de todos los contactos.
+	 *
+	 * @return Lista de contactos en formato JSON.
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Contact> getAllContacts() {
 		return service.getAllContacts();
