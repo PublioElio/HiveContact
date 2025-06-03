@@ -7,22 +7,28 @@ import org.springframework.stereotype.Repository;
 import model.Contact;
 
 /**
- * Implementation of the ContactsDao interface, managing database operations for contacts.
+ * Implementation of the ContactsDao interface, managing database operations for
+ * contacts.
  */
 @Repository
 public class ContactsDaoImp implements ContactsDao {
-	
+
 	private final ContactsJpaSpring contacts;
 
 	/**
-     * Constructor injecting the ContactsJpaSpring repository.
-     *
-     * @param contacts JPA repository for managing Contact entities.
-     */
+	 * Constructor injecting the ContactsJpaSpring repository.
+	 *
+	 * @param contacts JPA repository for managing Contact entities.
+	 */
 	public ContactsDaoImp(ContactsJpaSpring contacts) {
 		this.contacts = contacts;
 	}
-	
+
+	/**
+	 * Adds a new contact to the database.
+	 *
+	 * @param contact Contact object to be saved.
+	 */
 	@Override
 	public void addContact(Contact contact) {
 		contacts.save(contact);
