@@ -56,6 +56,12 @@ public class ContactsController {
 		return service.getContact(id);
 	}
 
+    /**
+     * Adds a new contact.
+     *
+     * @param contact Contact received in the request body.
+     * @return HTTP response indicating whether the contact was successfully added.
+     */
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> addContact(@RequestBody Contact contact) {
 		boolean isAdded = service.addContact(contact);
