@@ -87,6 +87,11 @@ public class ContactsController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
+    /**
+     * Deletes a contact by its ID.
+     *
+     * @param id ID of the contact to delete.
+     */
 	@DeleteMapping("/{id}")
 	public void deleteContact(@PathVariable int id) {
 		service.deleteContact(id);
