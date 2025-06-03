@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import model.Contact;
 
+/**
+ * Implementation of the ContactsDao interface, managing database operations for contacts.
+ */
 @Repository
 public class ContactsDaoImpl implements ContactsDao {
 	
