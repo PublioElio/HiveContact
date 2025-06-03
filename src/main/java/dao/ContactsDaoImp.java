@@ -67,16 +67,31 @@ public class ContactsDaoImp implements ContactsDao {
 
 	}
 
+	/**
+	 * Deletes a contact by its ID.
+	 *
+	 * @param idContact ID of the contact to delete.
+	 */
 	@Override
 	public void deleteContactById(int idContact) {
 		contacts.deleteById(idContact);
 	}
 
+	/**
+	 * Retrieves all contacts from the database.
+	 *
+	 * @return List of all Contact objects.
+	 */
 	@Override
 	public List<Contact> getAllContacts() {
 		return contacts.findAll();
 	}
 
+	/**
+	 * Updates an existing contact in the database.
+	 *
+	 * @param contact Contact object with updated details.
+	 */
 	@Override
 	public void updateContact(Contact contact) {
 		contacts.save(contact);
