@@ -18,7 +18,7 @@ import model.Contact;
 import service.ContactsService;
 
 /**
- * Controlador REST para gestionar operaciones CRUD sobre contactos.
+ * REST controller to manage CRUD operations on contacts.
  */
 @RestController
 @RequestMapping("/contacts")
