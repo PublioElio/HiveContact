@@ -34,28 +34,33 @@ public class ContactsDaoImp implements ContactsDao {
 		contacts.save(contact);
 	}
 
-    /**
-     * Retrieves a contact by its email.
-     *
-     * @param email Email of the contact to find.
-     * @return Contact object if found, otherwise null.
-     */
+	/**
+	 * Retrieves a contact by its email.
+	 *
+	 * @param email Email of the contact to find.
+	 * @return Contact object if found, otherwise null.
+	 */
 	@Override
 	public Contact getContactByEmail(String email) {
 		return contacts.findByEmail(email);
 	}
 
-    /**
-     * Retrieves a contact by its ID.
-     *
-     * @param idContact ID of the contact to find.
-     * @return Contact object if found, otherwise null.
-     */
+	/**
+	 * Retrieves a contact by its ID.
+	 *
+	 * @param idContact ID of the contact to find.
+	 * @return Contact object if found, otherwise null.
+	 */
 	@Override
 	public Contact getContactById(int idContact) {
 		return contacts.findById(idContact).orElse(null);
 	}
 
+	/**
+	 * Deletes a contact by its email.
+	 *
+	 * @param email Email of the contact to delete.
+	 */
 	@Override
 	public void deleteContactByEmail(String email) {
 		contacts.deleteByEmail(email);
