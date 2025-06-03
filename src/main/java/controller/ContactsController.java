@@ -44,7 +44,13 @@ public class ContactsController {
 	public List<Contact> getAllContacts() {
 		return service.getAllContacts();
 	}
-
+	
+    /**
+     * Retrieves a specific contact by its ID.
+     *
+     * @param id ID of the contact to retrieve.
+     * @return The contact found.
+     */
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Contact getContact(@PathVariable int id) {
 		return service.getContact(id);
