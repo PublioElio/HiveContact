@@ -71,6 +71,12 @@ public class ContactsController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error adding new contact");
 	}
 
+    /**
+     * Updates an existing contact.
+     *
+     * @param contact Updated contact sent in the request body.
+     * @return Updated contact or HTTP response in case of an error.
+     */
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Contact> updateContact(@RequestBody Contact contact) {
 		Contact updatedContact = service.getContact(contact.getIdContact());
