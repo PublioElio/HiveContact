@@ -36,10 +36,10 @@ public class ContactsController {
 	}
 
 	/**
-	 * Obtiene la lista de todos los contactos.
-	 *
-	 * @return Lista de contactos en formato JSON.
-	 */
+     * Retrieves a list of all contacts.
+     *
+     * @return List of contacts in JSON format.
+     */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Contact> getAllContacts() {
 		return service.getAllContacts();
