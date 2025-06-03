@@ -10,11 +10,11 @@ import model.Contact;
  * Implementation of the ContactsDao interface, managing database operations for contacts.
  */
 @Repository
-public class ContactsDaoImpl implements ContactsDao {
+public class ContactsDaoImp implements ContactsDao {
 	
 	private final ContactsJpaSpring contacts;
 
-	public ContactsDaoImpl(ContactsJpaSpring contacts) {
+	public ContactsDaoImp(ContactsJpaSpring contacts) {
 		this.contacts = contacts;
 	}
 	
