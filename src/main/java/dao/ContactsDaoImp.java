@@ -14,6 +14,11 @@ public class ContactsDaoImp implements ContactsDao {
 	
 	private final ContactsJpaSpring contacts;
 
+	/**
+     * Constructor injecting the ContactsJpaSpring repository.
+     *
+     * @param contacts JPA repository for managing Contact entities.
+     */
 	public ContactsDaoImp(ContactsJpaSpring contacts) {
 		this.contacts = contacts;
 	}
