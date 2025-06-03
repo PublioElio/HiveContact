@@ -27,10 +27,10 @@ public class ContactsController {
 	private final ContactsService service;
 
 	/**
-	 * Constructor que inyecta la instancia del servicio ContactsService.
-	 *
-	 * @param service Servicio de contactos.
-	 */
+     * Constructor injecting the ContactsService instance.
+     *
+     * @param service Contacts service instance.
+     */
 	public ContactsController(ContactsService service) {
 		this.service = service;
 	}
