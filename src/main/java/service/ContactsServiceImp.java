@@ -7,6 +7,11 @@ import org.springframework.stereotype.Service;
 import dao.ContactsDao;
 import model.Contact;
 
+/**
+ * Implementation of the ContactsService interface. This class provides the
+ * business logic for managing Contact entities using a data access object
+ * (DAO).
+ */
 @Service
 public class ContactsServiceImp implements ContactsService {
 
