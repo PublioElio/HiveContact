@@ -65,6 +65,13 @@ public class ContactsServiceImp implements ContactsService {
 		}
 	}
 
+	/**
+	 * Deletes a contact by its ID if it exists in the database.
+	 * 
+	 * @param idContact The ID of the contact to delete.
+	 * @return true if the contact was successfully deleted, false if it does not
+	 *         exist.
+	 */
 	@Override
 	public boolean deleteContact(int idContact) {
 		if (dao.getContactById(idContact) != null) {
