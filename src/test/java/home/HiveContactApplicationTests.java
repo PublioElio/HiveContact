@@ -56,11 +56,11 @@ class HiveContactApplicationTests {
 	}
 
 	/**
-     * Tests the creation of a new contact.
-     * Sends a POST request with JSON data and expects a 201 Created response.
-     * 
-     * @throws Exception if the request fails
-     */
+	 * Tests the creation of a new contact. Sends a POST request with JSON data and
+	 * expects a 201 Created response.
+	 * 
+	 * @throws Exception if the request fails
+	 */
 	@Test
 	@Order(2)
 	void testCreateContacts() throws Exception {
@@ -69,6 +69,12 @@ class HiveContactApplicationTests {
 				.andDo(print()).andExpect(status().isCreated());
 	}
 
+	/**
+	 * Tests the update of an existing contact. Sends a PUT request with new data
+	 * and verifies a 200 OK response.
+	 * 
+	 * @throws Exception if the request fails
+	 */
 	@Test
 	@Order(3)
 	void testUpdateContact() throws Exception {
