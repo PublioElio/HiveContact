@@ -40,5 +40,11 @@ public interface ContactsService {
 	 */
 	boolean deleteContact(int idContact);
 
+	/**
+	 * Retrieves a contact by its unique identifier.
+	 * 
+	 * @param idContact the ID of the contact to retrieve
+	 * @return the Contact entity if found, or null otherwise
+	 */
 	Contact getContact(int idContact);
 }
