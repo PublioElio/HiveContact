@@ -81,6 +81,12 @@ public class ContactsServiceImp implements ContactsService {
 		return false;
 	}
 
+	/**
+	 * Retrieves a contact by its ID if it exists in the database.
+	 * 
+	 * @param idContact The ID of the contact to retrieve.
+	 * @return The contact found, or null if it does not exist.
+	 */
 	@Override
 	public Contact getContact(int idContact) {
 		return dao.getContactById(idContact);
