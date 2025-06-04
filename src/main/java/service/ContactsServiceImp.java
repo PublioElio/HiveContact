@@ -17,6 +17,12 @@ public class ContactsServiceImp implements ContactsService {
 
 	private final ContactsDao dao;
 
+	/**
+	 * Constructor that injects the DAO dependency.
+	 * 
+	 * @param dao Instance of ContactsDao for data access operations on Contact
+	 *            entities.
+	 */
 	public ContactsServiceImp(ContactsDao dao) {
 		this.dao = dao;
 	}
