@@ -4,7 +4,7 @@ HiveContact/
 │── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   ├── home/  # Main class to start the Spring Boot application
+│   │   │   ├── home/             # Main class to start the Spring Boot application
 │   │   │   ├── controllers/      # REST controllers exposing API endpoints
 │   │   │   ├── dao/              # Data Access Objects (DAO) for database interactions
 │   │   │   ├── model/            # JPA entities representing database tables
