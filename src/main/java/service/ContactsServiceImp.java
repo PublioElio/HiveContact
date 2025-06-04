@@ -53,6 +53,11 @@ public class ContactsServiceImp implements ContactsService {
 		return dao.getAllContacts();
 	}
 
+	/**
+	 * Updates an existing contact if it is already stored in the database.
+	 * 
+	 * @param contact The contact with updated information.
+	 */
 	@Override
 	public void updateContact(Contact contact) {
 		if (dao.getContactById(contact.getIdContact()) != null) {
