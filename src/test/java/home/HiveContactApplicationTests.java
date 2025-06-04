@@ -18,6 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+/**
+ * Integration test class for the HiveContact microservice.
+ * Uses MockMvc to simulate HTTP requests and validate responses.
+ */
 @AutoConfigureMockMvc
 @TestMethodOrder(OrderAnnotation.class)
 @SpringBootTest
