@@ -9,6 +9,8 @@ import jakarta.persistence.*;
  * This class is mapped to the `contacts` table using JPA annotations. It
  * implements `Serializable` to allow instances to be serialized, which can be
  * useful in caching or distributed computing scenarios.
+ * 
+ * @author Adriano Díaz Benítez
  */
 @Entity
 @Table(name = "contacts")
