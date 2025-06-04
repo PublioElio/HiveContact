@@ -43,6 +43,12 @@ class HiveContactApplicationTests {
 		mock.perform(get("/contacts/60")).andExpect(status().isNotFound());
 	}
 
+	/**
+	 * Tests retrieval of all contacts. Sends a GET request to fetch all stored
+	 * contacts and verifies a 200 OK response.
+	 * 
+	 * @throws Exception if the request fails
+	 */
 	@Test
 	@Order(1)
 	void testContacts() throws Exception {
