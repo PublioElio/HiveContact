@@ -8,8 +8,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import model.Contact;
 
+/**
+ * ContactsJpaSpring interface defines a repository for managing Contact entities.
+ * It extends JpaRepository to provide CRUD operations for Contact entities using Spring Data JPA.
+ */
 public interface ContactsJpaSpring extends JpaRepository<Contact, Integer> {
 
+    /**
+     * Finds a contact by its email address.
+     * 
+     * @param contactEmail the email address of the contact to find
+     * @return the Contact entity matching the provided email, or null if not found
+     */
 	Contact findByEmail(String contactEmail);
 
 	@Transactional
