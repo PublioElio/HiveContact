@@ -43,6 +43,11 @@ public class ContactsServiceImp implements ContactsService {
 		return false;
 	}
 
+	/**
+	 * Retrieves a list of all stored contacts.
+	 * 
+	 * @return List of contacts.
+	 */
 	@Override
 	public List<Contact> getAllContacts() {
 		return dao.getAllContacts();
