@@ -22,6 +22,12 @@ public interface ContactsJpaSpring extends JpaRepository<Contact, Integer> {
      */
 	Contact findByEmail(String contactEmail);
 
+	/**
+     * Deletes a contact by its email address.
+     * This operation is transactional and modifying, meaning it alters the database state.
+     * 
+     * @param email the email address of the contact to delete
+     */
 	@Transactional
 	@Modifying
 	@Query("DELETE FROM Contact c WHERE c.email = :email")
