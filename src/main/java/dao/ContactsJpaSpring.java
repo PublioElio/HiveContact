@@ -9,25 +9,28 @@ import org.springframework.transaction.annotation.Transactional;
 import model.Contact;
 
 /**
- * ContactsJpaSpring interface defines a repository for managing Contact entities.
- * It extends JpaRepository to provide CRUD operations for Contact entities using Spring Data JPA.
+ * ContactsJpaSpring interface defines a repository for managing Contact
+ * entities. It extends JpaRepository to provide CRUD operations for Contact
+ * entities using Spring Data JPA.
+ * 
+ * @author Adriano Díaz Benítez
  */
 public interface ContactsJpaSpring extends JpaRepository<Contact, Integer> {
 
-    /**
-     * Finds a contact by its email address.
-     * 
-     * @param contactEmail the email address of the contact to find
-     * @return the Contact entity matching the provided email, or null if not found
-     */
+	/**
+	 * Finds a contact by its email address.
+	 * 
+	 * @param contactEmail the email address of the contact to find
+	 * @return the Contact entity matching the provided email, or null if not found
+	 */
 	Contact findByEmail(String contactEmail);
 
 	/**
-     * Deletes a contact by its email address.
-     * This operation is transactional and modifying, meaning it alters the database state.
-     * 
-     * @param email the email address of the contact to delete
-     */
+	 * Deletes a contact by its email address. This operation is transactional and
+	 * modifying, meaning it alters the database state.
+	 * 
+	 * @param email the email address of the contact to delete
+	 */
 	@Transactional
 	@Modifying
 	@Query("DELETE FROM Contact c WHERE c.email = :email")
