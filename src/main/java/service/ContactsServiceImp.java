@@ -27,6 +27,13 @@ public class ContactsServiceImp implements ContactsService {
 		this.dao = dao;
 	}
 
+	/**
+	 * Adds a new contact if there is no existing contact with the same ID.
+	 * 
+	 * @param contact The contact to add.
+	 * @return true if the contact was successfully added, false if it already
+	 *         exists.
+	 */
 	@Override
 	public boolean addContact(Contact contact) {
 		if (dao.getContactById(contact.getIdContact()) == null) {
