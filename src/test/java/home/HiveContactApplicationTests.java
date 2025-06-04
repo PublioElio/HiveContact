@@ -19,8 +19,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 /**
- * Integration test class for the HiveContact microservice.
- * Uses MockMvc to simulate HTTP requests and validate responses.
+ * Integration test class for the HiveContact microservice. Uses MockMvc to
+ * simulate HTTP requests and validate responses.
  */
 @AutoConfigureMockMvc
 @TestMethodOrder(OrderAnnotation.class)
@@ -30,11 +30,17 @@ class HiveContactApplicationTests {
 	@Autowired
 	MockMvc mock;
 
+	/**
+	 * Tests the deletion of a contact. Verifies that the contact is successfully
+	 * deleted and then confirms its absence with a GET request.
+	 * 
+	 * @throws Exception if the request fails
+	 */
 	@Test
 	@Order(0)
 	void testDeleteContact() throws Exception {
 		mock.perform(delete("/contacts/60")).andDo(print()).andExpect(status().isOk());
-	    mock.perform(get("/contacts/60")).andExpect(status().isNotFound());
+		mock.perform(get("/contacts/60")).andExpect(status().isNotFound());
 	}
 
 	@Test
@@ -46,17 +52,17 @@ class HiveContactApplicationTests {
 	@Test
 	@Order(2)
 	void testCreateContacts() throws Exception {
-		mock.perform(post("/contacts").contentType(MediaType.APPLICATION_JSON)
-				.content("{\"contactAge\":\"38\", \"contactName\":\"Victor Santos\", \"contactEmail\":\"victor.santos@example.com\"}")).andDo(print())
-				.andExpect(status().isCreated());
+		mock.perform(post("/contacts").contentType(MediaType.APPLICATION_JSON).content(
+				"{\"contactAge\":\"38\", \"contactName\":\"Victor Santos\", \"contactEmail\":\"victor.santos@example.com\"}"))
+				.andDo(print()).andExpect(status().isCreated());
 	}
 
 	@Test
 	@Order(3)
 	void testUpdateContact() throws Exception {
-		mock.perform(put("/contacts").contentType(MediaType.APPLICATION_JSON)
-				.content("{\"contactAge\":\"88\", \"contactName\":\"Alan Moore\", \"contactEmail\":\"alan.moore@example-new.com\"}")).andDo(print())
-				.andExpect(status().isOk());
+		mock.perform(put("/contacts").contentType(MediaType.APPLICATION_JSON).content(
+				"{\"contactAge\":\"88\", \"contactName\":\"Alan Moore\", \"contactEmail\":\"alan.moore@example-new.com\"}"))
+				.andDo(print()).andExpect(status().isOk());
 	}
-	
+
 }
