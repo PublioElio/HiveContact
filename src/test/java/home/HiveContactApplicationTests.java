@@ -55,6 +55,12 @@ class HiveContactApplicationTests {
 		mock.perform(get("/contacts")).andDo(print()).andExpect(status().isOk());
 	}
 
+	/**
+     * Tests the creation of a new contact.
+     * Sends a POST request with JSON data and expects a 201 Created response.
+     * 
+     * @throws Exception if the request fails
+     */
 	@Test
 	@Order(2)
 	void testCreateContacts() throws Exception {
