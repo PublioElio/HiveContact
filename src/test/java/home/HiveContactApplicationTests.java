@@ -21,6 +21,8 @@ import org.springframework.test.web.servlet.MockMvc;
 /**
  * Integration test class for the HiveContact microservice. Uses MockMvc to
  * simulate HTTP requests and validate responses.
+ * 
+ * @author Adriano Díaz Benítez
  */
 @AutoConfigureMockMvc
 @TestMethodOrder(OrderAnnotation.class)
