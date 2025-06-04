@@ -32,6 +32,12 @@ public interface ContactsService {
 	 */
 	void updateContact(Contact contact);
 
+	/**
+	 * Deletes a contact based on its unique identifier.
+	 * 
+	 * @param idContact the ID of the contact to be deleted
+	 * @return true if the contact was successfully deleted, false otherwise
+	 */
 	boolean deleteContact(int idContact);
 
 	Contact getContact(int idContact);
