@@ -19,12 +19,17 @@ public interface ContactsService {
 	boolean addContact(Contact contact);
 
 	/**
-     * Retrieves all contacts.
-     * 
-     * @return a list of all Contact entities
-     */
+	 * Retrieves all contacts.
+	 * 
+	 * @return a list of all Contact entities
+	 */
 	List<Contact> getAllContacts();
 
+	/**
+	 * Updates an existing contact's details.
+	 * 
+	 * @param contact the Contact entity with updated information
+	 */
 	void updateContact(Contact contact);
 
 	boolean deleteContact(int idContact);
