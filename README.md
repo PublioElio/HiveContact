@@ -3,7 +3,7 @@
 
 > Microservicio RESTful para la gestión de contactos, desarrollado con **Spring Boot 3**, **MySQL** y **JPA**.  
 
-## 🧠 Descripción
+## Descripción
 
 **HiveContact** es una API REST que permite realizar operaciones CRUD (crear, leer, actualizar y eliminar) sobre una base de datos de contactos. El sistema está diseñado utilizando buenas prácticas de arquitectura de software, incluyendo separación por capas (`controller`, `service`, `dao`, `model`) y pruebas automatizadas con `MockMvc`.
 
