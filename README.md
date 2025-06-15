@@ -60,7 +60,7 @@ Controller → Service → DAO (→ JPA Repository) → MySQL
 
 ---
 
-## 📝 Endpoints REST
+## Endpoints REST
 
 Todos los endpoints están bajo `/contacts` y consumen/producen JSON.
 
