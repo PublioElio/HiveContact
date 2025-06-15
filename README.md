@@ -3,7 +3,14 @@
 </p>
 # 🐝 HiveContact
 
-> Microservicio RESTful para la gestión de contactos, desarrollado con **Spring Boot 3**, **MySQL** y **JPA**.  
+> Microservicio RESTful para la gestión de contactos, desarrollado con **Spring Boot 3**, **MySQL** y **JPA**.
+
+![Java](https://img.shields.io/badge/Java-21-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.0-brightgreen)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
+![Maven](https://img.shields.io/badge/Build-Maven-orange)
+![REST API](https://img.shields.io/badge/API-RESTful-ff69b4)
+![Status](https://img.shields.io/badge/Status-Working-success)
 
 ## Descripción
 
