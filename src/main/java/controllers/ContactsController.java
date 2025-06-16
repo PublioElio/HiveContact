@@ -21,7 +21,7 @@ import service.ContactsService;
 /**
  * REST controller to manage CRUD operations on contacts.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 @CrossOrigin(origins = "*")
 @RestController
