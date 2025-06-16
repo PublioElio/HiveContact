@@ -13,7 +13,7 @@ import model.Contact;
  * entities. It extends JpaRepository to provide CRUD operations for Contact
  * entities using Spring Data JPA.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 public interface ContactsJpaSpring extends JpaRepository<Contact, Integer> {
 
