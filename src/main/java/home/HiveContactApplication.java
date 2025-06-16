@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * This class initializes the Spring Boot application and configures package
  * scanning for components, entities, and repositories.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 @SpringBootApplication // Marks this class as a Spring Boot application
 @ComponentScan(basePackages = { "controller", "dao", "service" }) // Scans for components in these packages

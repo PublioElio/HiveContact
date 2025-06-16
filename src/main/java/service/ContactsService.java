@@ -8,7 +8,7 @@ import model.Contact;
  * ContactsService interface defines the contract for managing Contact entities.
  * It provides methods to perform CRUD operations on contacts.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 public interface ContactsService {
 

@@ -10,7 +10,7 @@ import model.Contact;
  * Implementations of this interface interact with the database to store,
  * retrieve, update, and delete contact records.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 public interface ContactsDao {
 

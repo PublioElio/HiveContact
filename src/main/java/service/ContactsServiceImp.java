@@ -12,7 +12,7 @@ import model.Contact;
  * business logic for managing Contact entities using a data access object
  * (DAO).
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 @Service
 public class ContactsServiceImp implements ContactsService {

@@ -10,7 +10,7 @@ import jakarta.persistence.*;
  * implements `Serializable` to allow instances to be serialized, which can be
  * useful in caching or distributed computing scenarios.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 @Entity
 @Table(name = "contacts")
