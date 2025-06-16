@@ -10,7 +10,7 @@ import model.Contact;
  * Implementation of the ContactsDao interface, managing database operations for
  * contacts.
  * 
- * @author Adriano Díaz Benítez
+ * @author AdrianoDíazBenítez
  */
 @Repository
 public class ContactsDaoImp implements ContactsDao {
